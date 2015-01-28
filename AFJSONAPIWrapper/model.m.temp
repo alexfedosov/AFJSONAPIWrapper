@@ -1,0 +1,19 @@
+//
+//  {$modelName}.m
+//
+
+#import "{$modelName}.h"
+{$includes}
+
+@implementation {$modelName}
+
+#pragma mark Key mapping
+
++ (NSDictionary*)JSONKeyPathsByPropertyKey{
+    return
+    @{
+            {$mapping}
+     };
+}
+
+@end

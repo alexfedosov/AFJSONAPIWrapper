@@ -1,0 +1,16 @@
+//
+//  {$modelName}.h
+//
+//
+//  Created by AFJSONAPIWrapper
+//
+//
+
+#import <Foundation/Foundation.h>
+
+{$includes}
+@interface {$modelName} : NSObject
+
+{$properties}
+
+@end

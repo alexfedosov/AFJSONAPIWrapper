@@ -1,0 +1,43 @@
+[
+     {
+     "trainer_profile": {
+                         "_id": "549932ab254d2916bc453b32",
+                         "club": "Nowhere",
+                         "club_location": "",
+                         "user": {
+                                 "_id": "549932ab254d2916bc453b32",
+                                 "name": "Petr",
+                                 "surname": "Petrov",
+                                 "avatar": "http://st.schedulers.me/avatars/6c6342e50ae474d328fa1339d99720231639827a.jpg"
+                                 },
+                         "schedule": {
+                                     "active": true,
+                                     "date_end": "",
+                                     "date_start": "2014-11-26 10:56:00+00:00",
+                                     "day": {
+                                             "active": true,
+                                             "day": 0,
+                                             "span":
+                                                     [
+                                                      {
+                                                      "busy": false,
+                                                      "end": "1970-01-01 13:00:00+00:00",
+                                                      "start": "1970-01-01 10:00:00+00:00"
+                                                      },
+                                                      {
+                                                      "busy": false,
+                                                      "end": "1970-01-01 13:00:00+00:00",
+                                                      "start": "1970-01-01 10:00:00+00:00"
+                                                      },
+                                                      {
+                                                      "busy": false,
+                                                      "end": "1970-01-01 13:00:00+00:00",
+                                                      "start": "1970-01-01 10:00:00+00:00"
+                                                      }
+                                                     ]
+                                             },
+                                             "interval": 4
+                                             }
+                         }
+     }
+ ]

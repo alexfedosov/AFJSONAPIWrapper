@@ -7,11 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ModelsParser.h"
+#import "TemplateRenderer.h"
+#import "ModelProcessor.h"
+#import "Model.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        NSUserDefaults *args = [NSUserDefaults standardUserDefaults];
+        NSString *path = [args stringForKey:@"models"];
+        NSString *output = [args stringForKey:@"output"];
+        
+        ModelsParser *parser = [ModelsParser new];
+        NSArray *models = [parser parseJSONFileWithPath:path];
+        
+        ModelProcessor *processor = [ModelProcessor new];
+        for (NSDictionary *model in models) {
+            [processor prepareModel:model];
+        }
+        
+        TemplateRenderer *renderer = [TemplateRenderer new];
+        for (Model *model in processor.generatedModels) {
+            [renderer renderModel:model toPath:output];
+        }
     }
     return 0;
 }
