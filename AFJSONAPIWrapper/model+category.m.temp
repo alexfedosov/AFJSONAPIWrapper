@@ -1,0 +1,11 @@
+//
+//  {$modelName}+AFJSONWrapper.m
+//
+
+#import "{$modelName}+AFJSONWrapper.h"
+
+
+@implementation {$modelName} (AFJSONWrapper)
+
+
+@end

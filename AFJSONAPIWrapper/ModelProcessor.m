@@ -2,7 +2,7 @@
 //  ModelProcessor.m
 //  AFJSONAPIWrapper
 //
-//  Created by Alexaner Fedosov on 28.01.15.
+//  Created by Alexaner Fedosov on 30.01.15.
 //  Copyright (c) 2015 alexfedosov. All rights reserved.
 //
 
@@ -43,6 +43,12 @@
 
 - (NSString *)variableNameWithProperty:(Property *)property
 {
+    NSArray *splitClass = [property.originalName componentsSeparatedByString:@":"];
+    
+    if (splitClass.count >= 2 && [splitClass.firstObject isEqualToString:@"var"]) {
+        return [splitClass objectAtIndex:1];
+    }
+    
     NSArray *tokens = [property.originalName componentsSeparatedByString:@"_"];
     NSString *result = @"";
     
@@ -58,16 +64,12 @@
 
 - (NSString *)classNameWithProperty:(Property *)property
 {
-    if (property.array) {
-        return @"NSArray";
+    if (property.array || [property.originalValue isKindOfClass:[NSDictionary class]]) {
+        return [self modelClassNameWithString:property.originalName];
     }
     
     if ([property.originalValue isKindOfClass:[NSNumber class]]) {
         return @"NSNumber";
-    }
-    
-    if ([property.originalValue isKindOfClass:[NSDictionary class]]) {
-        return [self modelClassNameWithString:property.originalName];
     }
     
     if ([property.originalValue isKindOfClass:[NSString class]]) {
@@ -102,18 +104,29 @@
         
         Property *property = [Property new];
         property.originalName = key;
+        property.parsedName = [[key componentsSeparatedByString:@":"] lastObject];
         
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            property.originalValue = key;
+            property.customClass = YES;
+            property.originalValue = value;
             [self prepareModel:@{key : value}];
             [modelObject.includes addObject:[self modelClassNameWithString:key]];
         }
         else if ([value isKindOfClass:[NSArray class]])
         {
+            if ([value count] == 0) {
+                continue;
+            }
             property.originalValue = key;
-            [self prepareModel:@{key : [value firstObject]}];
-            [modelObject.includes addObject:[self modelClassNameWithString:key]];
+            id firstArrayValue = [value firstObject];
+            
+            if ([firstArrayValue isKindOfClass:[NSDictionary class]]) {
+                [self prepareModel:@{key : [value firstObject]}];
+                property.customClass = YES;
+                [modelObject.includes addObject:[self modelClassNameWithString:key]];
+            }
+            
             property.array = YES;
         }
         else

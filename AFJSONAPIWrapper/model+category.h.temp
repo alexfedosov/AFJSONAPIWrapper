@@ -1,0 +1,14 @@
+//
+//  {$modelName}+AFJSONWrapper.h
+//
+//
+//  Created by AFJSONAPIWrapper
+//
+//
+
+#import "{$modelName}.h"
+
+@interface {$modelName} (AFJSONWrapper)
+
+
+@end

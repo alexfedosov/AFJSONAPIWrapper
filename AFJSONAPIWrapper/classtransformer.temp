@@ -1,0 +1,5 @@
+
++ (NSValueTransformer *){$key}JSONTransformer
+{
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[{$modelName}  class]];
+}

@@ -2,7 +2,7 @@
 //  main.m
 //  AFJSONAPIWrapper
 //
-//  Created by Alexaner Fedosov on 28.01.15.
+//  Created by Alexaner Fedosov on 30.01.15.
 //  Copyright (c) 2015 alexfedosov. All rights reserved.
 //
 
@@ -28,9 +28,7 @@ int main(int argc, const char * argv[]) {
         }
         
         TemplateRenderer *renderer = [TemplateRenderer new];
-        for (Model *model in processor.generatedModels) {
-            [renderer renderModel:model toPath:output];
-        }
+        [renderer renderArray:processor.generatedModels toPath:output];
     }
     return 0;
 }

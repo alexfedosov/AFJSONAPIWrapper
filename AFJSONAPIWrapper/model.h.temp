@@ -6,10 +6,11 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "MTLModel.h"
+#import "MTLJSONAdapter.h"
 
 {$includes}
-@interface {$modelName} : NSObject
+@interface {$modelName} : MTLModel <MTLJSONSerializing>
 
 {$properties}
 

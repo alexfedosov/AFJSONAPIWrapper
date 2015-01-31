@@ -17,6 +17,10 @@
 		956BACAB1A79331700E81ADA /* ModelProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 956BACAA1A79331700E81ADA /* ModelProcessor.m */; };
 		956BACAE1A79336900E81ADA /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 956BACAD1A79336900E81ADA /* Model.m */; };
 		956BACB11A79338400E81ADA /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 956BACB01A79338400E81ADA /* Property.m */; };
+		956BACB81A7B55A700E81ADA /* arraytransformer.temp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 956BACB61A7A816000E81ADA /* arraytransformer.temp */; };
+		956BACB91A7B55A900E81ADA /* classtransformer.temp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 956BACB71A7B555D00E81ADA /* classtransformer.temp */; };
+		956BACC11A7BCEAF00E81ADA /* model+category.m.temp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 956BACC01A7BCE9600E81ADA /* model+category.m.temp */; };
+		956BACC21A7BD16000E81ADA /* model+category.h.temp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 956BACBF1A7B968500E81ADA /* model+category.h.temp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,10 +30,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				956BACA21A7903E000E81ADA /* model.h.temp in CopyFiles */,
+				956BACC11A7BCEAF00E81ADA /* model+category.m.temp in CopyFiles */,
+				956BACC21A7BD16000E81ADA /* model+category.h.temp in CopyFiles */,
 				956BACA81A791CD800E81ADA /* model.m.temp in CopyFiles */,
+				956BACB81A7B55A700E81ADA /* arraytransformer.temp in CopyFiles */,
+				956BACB91A7B55A900E81ADA /* classtransformer.temp in CopyFiles */,
 				956BACA41A7913FD00E81ADA /* property.temp in CopyFiles */,
 				956BACA71A791CD500E81ADA /* mapping.temp in CopyFiles */,
+				956BACA21A7903E000E81ADA /* model.h.temp in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +46,6 @@
 /* Begin PBXFileReference section */
 		956BAC8E1A78DF7B00E81ADA /* AFJSONAPIWrapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AFJSONAPIWrapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		956BAC911A78DF7B00E81ADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		956BAC981A78DFAA00E81ADA /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		956BAC991A78E2AD00E81ADA /* models.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = models.json; sourceTree = "<group>"; };
 		956BAC9A1A78E31D00E81ADA /* ModelsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelsParser.h; sourceTree = "<group>"; };
 		956BAC9B1A78E31D00E81ADA /* ModelsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelsParser.m; sourceTree = "<group>"; };
@@ -54,6 +61,10 @@
 		956BACAD1A79336900E81ADA /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		956BACAF1A79338400E81ADA /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
 		956BACB01A79338400E81ADA /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
+		956BACB61A7A816000E81ADA /* arraytransformer.temp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arraytransformer.temp; sourceTree = "<group>"; };
+		956BACB71A7B555D00E81ADA /* classtransformer.temp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classtransformer.temp; sourceTree = "<group>"; };
+		956BACBF1A7B968500E81ADA /* model+category.h.temp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "model+category.h.temp"; sourceTree = "<group>"; };
+		956BACC01A7BCE9600E81ADA /* model+category.m.temp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "model+category.m.temp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,25 +97,68 @@
 		956BAC901A78DF7B00E81ADA /* AFJSONAPIWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				956BACBE1A7B962700E81ADA /* Models */,
+				956BACBD1A7B961700E81ADA /* Renderer */,
+				956BACBC1A7B961000E81ADA /* Parser */,
+				956BACBB1A7B95FF00E81ADA /* example */,
+				956BACBA1A7B95E000E81ADA /* Templates */,
 				956BAC911A78DF7B00E81ADA /* main.m */,
-				956BAC981A78DFAA00E81ADA /* example.json */,
-				956BAC991A78E2AD00E81ADA /* models.json */,
-				956BAC9A1A78E31D00E81ADA /* ModelsParser.h */,
-				956BAC9B1A78E31D00E81ADA /* ModelsParser.m */,
-				956BAC9E1A78FCC600E81ADA /* TemplateRenderer.h */,
-				956BAC9F1A78FCC600E81ADA /* TemplateRenderer.m */,
+			);
+			path = AFJSONAPIWrapper;
+			sourceTree = "<group>";
+		};
+		956BACBA1A7B95E000E81ADA /* Templates */ = {
+			isa = PBXGroup;
+			children = (
 				956BACA11A79034500E81ADA /* model.h.temp */,
+				956BACBF1A7B968500E81ADA /* model+category.h.temp */,
 				956BACA51A791B8800E81ADA /* model.m.temp */,
+				956BACC01A7BCE9600E81ADA /* model+category.m.temp */,
+				956BACB61A7A816000E81ADA /* arraytransformer.temp */,
+				956BACB71A7B555D00E81ADA /* classtransformer.temp */,
 				956BACA31A7913CF00E81ADA /* property.temp */,
 				956BACA61A791C4000E81ADA /* mapping.temp */,
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
+		956BACBB1A7B95FF00E81ADA /* example */ = {
+			isa = PBXGroup;
+			children = (
+				956BAC991A78E2AD00E81ADA /* models.json */,
+			);
+			name = example;
+			sourceTree = "<group>";
+		};
+		956BACBC1A7B961000E81ADA /* Parser */ = {
+			isa = PBXGroup;
+			children = (
 				956BACA91A79331700E81ADA /* ModelProcessor.h */,
 				956BACAA1A79331700E81ADA /* ModelProcessor.m */,
+				956BAC9A1A78E31D00E81ADA /* ModelsParser.h */,
+				956BAC9B1A78E31D00E81ADA /* ModelsParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		956BACBD1A7B961700E81ADA /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				956BAC9E1A78FCC600E81ADA /* TemplateRenderer.h */,
+				956BAC9F1A78FCC600E81ADA /* TemplateRenderer.m */,
+			);
+			name = Renderer;
+			sourceTree = "<group>";
+		};
+		956BACBE1A7B962700E81ADA /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				956BACAC1A79336900E81ADA /* Model.h */,
 				956BACAD1A79336900E81ADA /* Model.m */,
 				956BACAF1A79338400E81ADA /* Property.h */,
 				956BACB01A79338400E81ADA /* Property.m */,
 			);
-			path = AFJSONAPIWrapper;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +336,7 @@
 				956BAC971A78DF7B00E81ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

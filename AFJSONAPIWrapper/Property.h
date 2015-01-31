@@ -2,7 +2,7 @@
 //  Property.h
 //  AFJSONAPIWrapper
 //
-//  Created by Alexaner Fedosov on 28.01.15.
+//  Created by Alexaner Fedosov on 30.01.15.
 //  Copyright (c) 2015 alexfedosov. All rights reserved.
 //
 
@@ -13,8 +13,10 @@
 @property (nonatomic, strong) NSString *className;
 @property (nonatomic, strong) NSString *variableName;
 @property (nonatomic, strong) NSString *originalName;
+@property (nonatomic, strong) NSString *parsedName;
 @property (nonatomic, strong) id originalValue;
 @property (nonatomic, assign) BOOL primitive;
+@property (nonatomic, assign) BOOL customClass;
 @property (nonatomic, assign) BOOL array;
 
 @end

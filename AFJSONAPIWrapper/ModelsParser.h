@@ -2,7 +2,7 @@
 //  ModelsParser.h
 //  AFJSONAPIWrapper
 //
-//  Created by Alexaner Fedosov on 28.01.15.
+//  Created by Alexaner Fedosov on 30.01.15.
 //  Copyright (c) 2015 alexfedosov. All rights reserved.
 //
 

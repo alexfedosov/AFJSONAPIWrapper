@@ -1,1 +1,1 @@
-@property (nonatomic, strong) {$propertyClass} {$propertyName};
+@property (nonatomic) {$propertyClass} {$propertyName};
